@@ -30,7 +30,7 @@ concepts may be unfamiliar if you are new to R. (I may follow up with
 additional posts introducing R and its functionalities…Or I will keep
 posting these one-offs. Who knows?)** <br>
 
-#### READING (IMPORTING) DATA INTO R”
+#### READING (IMPORTING) DATA INTO R
 
 Ok, so why do we care about reading data into R? Well, most people store
 their data on their computer (or a web address or server) in a CSV,
