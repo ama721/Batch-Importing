@@ -1,8 +1,5 @@
 Batch Importing Data Files into the R Environment
 ================
-Ama Nyame-Mensah, Ph.D.
-
-# BATCH IMPORTING USING R
 
 As an avid programmer and data enthusiast, I am often approached with
 questions about streamlining data preparation processes. Anyone who
