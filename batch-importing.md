@@ -2,7 +2,7 @@ Batch Importing Data Files into the R Environment
 ================
 Ama Nyame-Mensah, Ph.D.
 
-#### Batch Importing Using R
+#### BATCH IMPORTING USING R
 
 As an avid programmer and data enthusiast, I am often approached with
 questions about streamlining data preparation processes. Anyone who
@@ -27,14 +27,13 @@ this way. But one of the major benefits of programming is that you can
 **automate repetitive and tedious tasks**. Naturally, I put on my
 educator hat and dedicated an entire blog post to it.
 
-<span style="font-weight:600">Disclaimer: This post is intended for
-advanced R users already familiar with Base R, the Tidyverse, loops, and
-functions. Some of the concepts may be unfamiliar if you are new to R.
-(I may follow up with additional posts introducing R and its
-functionalities…Or I will keep posting these one-offs. Who
-knows?)</span> <br>
+**Disclaimer: This post is intended for advanced R users already
+familiar with Base R, the Tidyverse, loops, and functions. Some of the
+concepts may be unfamiliar if you are new to R. (I may follow up with
+additional posts introducing R and its functionalities…Or I will keep
+posting these one-offs. Who knows?)** <br>
 
-#### Reading (Importing) data into R
+#### READING (IMPORTING) DATA INTO R”
 
 Ok, so why do we care about reading data into R? Well, most people store
 their data on their computer (or a web address or server) in a CSV,
@@ -45,7 +44,7 @@ databases. Situations where you have to query a database to extract data
 are beyond this article’s scope. However, I encourage all of you to
 learn how to pull data from databases. <br><br>
 
-#### Reading a Single Data Set into R
+#### READING A SINGLE DATA SET INTO R
 
 Using R, you can quickly import (i.e., read) data from a wide variety of
 file formats. In Base R, you could import the contents of a single CSV
@@ -53,8 +52,8 @@ file (with variable names in the first row) using the following function
 (be sure to replace **file.location.here** with the location of a data
 file.):
 
-<span style="font-weight:600; color:#202020">Mydata \<-
-read.csv(“file.location.here.csv”, header = TRUE, sep = “,”)</span>
+**Mydata \<- read.csv(“file.location.here.csv”, header = TRUE, sep =
+“,”)**
 
 I, myself, am partial to the
 [**data.table**](https://cran.r-project.org/web/packages/data.table/data.table.pdf)
@@ -62,10 +61,9 @@ function
 [**fread**](https://www.rdocumentation.org/packages/data.table/versions/1.14.2/topics/fread)
 when dealing with large data sets:
 
-<span style="font-weight:600; color:#202020">Mydata \<-
-fread(“file.location.here.csv”)</span> <br>
+**Mydata \<- fread(“file.location.here.csv”)** <br>
 
-#### Reading Multiple Data Sets into R – The Long Way
+#### READING MULTIPLE DATA SETS INTO R – THE LONG WAY
 
 Let’s say you had four CSV files you wanted to import into your R
 environment. You could import these files one-by-one using a function
@@ -86,11 +84,11 @@ ls()
 OR you could import the data sets all at the same time. Below I outline
 my three preferred methods. <br><br>
 
-#### Reading Multiple Data Sets into R – The FUN Way!
+#### READING MULTIPLE DATA SETS INTO R – THE FUN WAY!
 
-<span style="text-decoration:underline">Setting Up Your
-Environment</span> Before importing a batch of files from a directory,
-several pieces of information are helpful to know:
+**Setting Up Your Environment**  
+Before importing a batch of files from a directory, several pieces of
+information are helpful to know:
 <ol>
 <li>
 Where the data are located;
@@ -123,7 +121,7 @@ list.files()
     ##  [1] "batch importing.Rmd"   "batch-importing.md"    "batch-importing.Rmd"  
     ##  [4] "Batch-Importing.Rproj" "importing files.R"     "README.md"            
     ##  [7] "sample_dat_1.csv"      "sample_dat_2.csv"      "sample_dat_3.csv"     
-    ## [10] "sample_dat_4.csv"      "style.css"             "table.png"
+    ## [10] "sample_dat_4.csv"      "table.png"
 
 We only care about the (CSV) data files. To quickly produce a list of
 the CSV files, use the
@@ -178,8 +176,7 @@ print(dataframe_names)
 (Note, I also saved these names to a character vector (with multiple
 elements) called dataframe_names.) <br>  
 Okay, now we are ready to rock n roll! <br>  
-<span style="text-decoration:underline">Option # 1: List + For
-Loop</span> (Packages used:
+**Option # 1: List + For Loop** (Packages used:
 [**tidyverse**](https://www.tidyverse.org/packages/),
 [**data.table**](https://cran.r-project.org/web/packages/data.table/data.table.pdf))
 
@@ -209,8 +206,7 @@ function from the [**Purrr**](https://purrr.tidyverse.org/) package.
 dat <- dat %>% set_names(dataframe_names)
 ```
 
-<br> <span style="text-decoration:underline">Option # 2: lapply</span>
-(Packages used:
+<br> **Option # 2: lapply** (Packages used:
 [**data.table**](https://cran.r-project.org/web/packages/data.table/data.table.pdf))
 
 The family of [**apply
@@ -233,8 +229,8 @@ function are fed to the
 [**set_names**](https://www.rdocumentation.org/packages/purrr/versions/0.2.5/topics/set_names)
 function using the [**pipe (%>%)
 operator**](https://magrittr.tidyverse.org/). <br>  
-<span style="text-decoration:underline">Option # 3: map</span> (Packages
-used: [**tidyverse**](https://www.tidyverse.org/packages/),
+**Option # 3: map** (Packages used:
+[**tidyverse**](https://www.tidyverse.org/packages/),
 [**data.table**](https://cran.r-project.org/web/packages/data.table/data.table.pdf))
 
 The [**map
