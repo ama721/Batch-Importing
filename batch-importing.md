@@ -2,21 +2,6 @@ Batch Importing Data Files into the R Environment
 ================
 Ama Nyame-Mensah, Ph.D.
 
-<style type="text/css">
-  body{
-  font-family: Montserrat;
-}
-
-ul.check {
-  list-style: none;
-}
-
-ul.check li:before {
-  content: '✓';
-}
-
-</style>
-
 #### Batch Importing Using R
 
 As an avid programmer and data enthusiast, I am often approached with
@@ -147,7 +132,7 @@ list.files()
     ##  [1] "batch importing.Rmd"   "batch-importing.md"    "batch-importing.Rmd"  
     ##  [4] "Batch-Importing.Rproj" "importing files.R"     "README.md"            
     ##  [7] "sample_dat_1.csv"      "sample_dat_2.csv"      "sample_dat_3.csv"     
-    ## [10] "sample_dat_4.csv"      "table.png"
+    ## [10] "sample_dat_4.csv"      "style.css"             "table.png"
 
 We only care about the (CSV) data files. To quickly produce a list of
 the CSV files, use the
