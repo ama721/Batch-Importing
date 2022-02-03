@@ -1,0 +1,14 @@
+<style type="text/css">
+  body{
+  font-family: Montserrat;
+}
+
+ul.check {
+  list-style: none;
+}
+
+ul.check li:before {
+  content: '✓';
+}
+
+</style>
