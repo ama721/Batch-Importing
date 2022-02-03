@@ -27,15 +27,12 @@ this way. But one of the major benefits of programming is that you can
 **automate repetitive and tedious tasks**. Naturally, I put on my
 educator hat and dedicated an entire blog post to it.
 
-<p style="font-weight:600">
-Disclaimer: This post is intended for advanced R users already familiar
-with Base R, the Tidyverse, loops, and functions. Some of the concepts
-may be unfamiliar if you are new to R. (I may follow up with additional
-posts introducing R and its functionalities…Or I will keep posting these
-one-offs. Who knows?)
-</p>
-
-<br>
+<span style="font-weight:600">Disclaimer: This post is intended for
+advanced R users already familiar with Base R, the Tidyverse, loops, and
+functions. Some of the concepts may be unfamiliar if you are new to R.
+(I may follow up with additional posts introducing R and its
+functionalities…Or I will keep posting these one-offs. Who
+knows?)</span> <br>
 
 #### Reading (Importing) data into R
 
@@ -56,9 +53,8 @@ file (with variable names in the first row) using the following function
 (be sure to replace **file.location.here** with the location of a data
 file.):
 
-<p style="font-weight:600; color:#202020">
-Mydata \<- read.csv(“file.location.here.csv”, header = TRUE, sep = “,”)
-</p>
+<span style="font-weight:600; color:#202020">Mydata \<-
+read.csv(“file.location.here.csv”, header = TRUE, sep = “,”)</span>
 
 I, myself, am partial to the
 [**data.table**](https://cran.r-project.org/web/packages/data.table/data.table.pdf)
@@ -66,11 +62,8 @@ function
 [**fread**](https://www.rdocumentation.org/packages/data.table/versions/1.14.2/topics/fread)
 when dealing with large data sets:
 
-<p style="font-weight:600; color:#202020">
-Mydata \<- fread(“file.location.here.csv”)
-</p>
-
-<br>
+<span style="font-weight:600; color:#202020">Mydata \<-
+fread(“file.location.here.csv”)</span> <br>
 
 #### Reading Multiple Data Sets into R – The Long Way
 
@@ -95,11 +88,9 @@ my three preferred methods. <br><br>
 
 #### Reading Multiple Data Sets into R – The FUN Way!
 
-<p style="text-decoration:underline">
-Setting Up Your Environment
-</p>
-Before importing a batch of files from a directory, several pieces of
-information are helpful to know:
+<span style="text-decoration:underline">Setting Up Your
+Environment</span> Before importing a batch of files from a directory,
+several pieces of information are helpful to know:
 <ol>
 <li>
 Where the data are located;
@@ -187,11 +178,9 @@ print(dataframe_names)
 (Note, I also saved these names to a character vector (with multiple
 elements) called dataframe_names.) <br>  
 Okay, now we are ready to rock n roll! <br>  
-<p style="text-decoration:underline">
-Option # 1: List + For Loop
-</p>
-
-(Packages used: [**tidyverse**](https://www.tidyverse.org/packages/),
+<span style="text-decoration:underline">Option # 1: List + For
+Loop</span> (Packages used:
+[**tidyverse**](https://www.tidyverse.org/packages/),
 [**data.table**](https://cran.r-project.org/web/packages/data.table/data.table.pdf))
 
 Create an empty list
@@ -220,11 +209,7 @@ function from the [**Purrr**](https://purrr.tidyverse.org/) package.
 dat <- dat %>% set_names(dataframe_names)
 ```
 
-<br>
-<p style="text-decoration:underline">
-Option # 2: lapply
-</p>
-
+<br> <span style="text-decoration:underline">Option # 2: lapply</span>
 (Packages used:
 [**data.table**](https://cran.r-project.org/web/packages/data.table/data.table.pdf))
 
@@ -248,11 +233,8 @@ function are fed to the
 [**set_names**](https://www.rdocumentation.org/packages/purrr/versions/0.2.5/topics/set_names)
 function using the [**pipe (%>%)
 operator**](https://magrittr.tidyverse.org/). <br>  
-<p style="text-decoration:underline">
-Option # 3: map
-</p>
-
-(Packages used: [**tidyverse**](https://www.tidyverse.org/packages/),
+<span style="text-decoration:underline">Option # 3: map</span> (Packages
+used: [**tidyverse**](https://www.tidyverse.org/packages/),
 [**data.table**](https://cran.r-project.org/web/packages/data.table/data.table.pdf))
 
 The [**map
