@@ -288,4 +288,4 @@ of data import. Do you have a favorite function or method for
 simplifying or automating your data import process in R? Let me know in
 the comments below. <br>  
 Need support streamlining your data preparation process? [**Get in
-Touch**](https://www.anyamemensah.com/intake)!.
+Touch**](https://www.anyamemensah.com/intake)!
