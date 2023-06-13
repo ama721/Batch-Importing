@@ -2,7 +2,7 @@
 ### Packages ###
 # create notin operator
 `%notin%` <- Negate(`%in%`)
-# Download packages if not available
+# required packages
 pckgs <- c("tidyverse", "data.table", "mgsub")
 invisible(sapply(pckgs, FUN = require, character.only = TRUE))
 
