@@ -4,9 +4,6 @@
 `%notin%` <- Negate(`%in%`)
 # Download packages if not available
 pckgs <- c("tidyverse", "data.table", "mgsub")
-if (any(pckgs %notin% rownames(installed.packages())==TRUE)){
-  install.packages(pckgs, repos = c(CRAN = "http://cloud.r-project.org"))}
-# load packages 
 invisible(sapply(pckgs, FUN = require, character.only = TRUE))
 
 ### Import one by one ###
